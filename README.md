@@ -1,6 +1,6 @@
-Copyright 2018 - The LineageOS Project
+Copyright 2019 - The LineageOS Project
 
-Device configuration for Motorola G6 Plus (evert)
+Device configuration for Moto G7 Plus (lake)
 ==================================
 
 Basic   | Spec Sheet

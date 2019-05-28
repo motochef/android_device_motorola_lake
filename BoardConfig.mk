@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2019 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,16 +17,16 @@
 # Inherit from motorola sdm660-common
 -include device/motorola/sdm660-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/motorola/evert
+DEVICE_PATH := device/motorola/lake
 
 # Assertions
-TARGET_OTA_ASSERT_DEVICE := evert
+TARGET_OTA_ASSERT_DEVICE := lake
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 
 # Kernel
-TARGET_KERNEL_CONFIG := lineageos_evert_defconfig
+TARGET_KERNEL_CONFIG := lineageos_lake_defconfig
 TARGET_KERNEL_SOURCE := kernel/motorola/msm8998
 TARGET_KERNEL_CLANG_COMPILE := true
 
@@ -34,9 +34,9 @@ TARGET_KERNEL_CLANG_COMPILE := true
 BOARD_NFC_CHIPSET := pn553
 
 # Partitions
-BOARD_BOOTIMAGE_PARTITION_SIZE := 0x04000000
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x0AC000000
-BOARD_VENDORIMAGE_PARTITION_SIZE := 956301312
+BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2969567232
+BOARD_VENDORIMAGE_PARTITION_SIZE := 939524096
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR := vendor
 
@@ -47,10 +47,10 @@ TARGET_HAS_NO_WLAN_STATS := true
 ENABLE_VENDOR_RIL_SERVICE := false
 
 # Treble
-PRODUCT_SHIPPING_API_LEVEL := 26
+PRODUCT_SHIPPING_API_LEVEL := 28
 
 # Wifi
 WIFI_DRIVER_OPERSTATE_PATH := "/sys/class/net/wlan0/operstate"
 
 # inherit from the proprietary version
--include vendor/motorola/evert/BoardConfigVendor.mk
+-include vendor/motorola/lake/BoardConfigVendor.mk
